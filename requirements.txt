@@ -10,3 +10,4 @@ langchain-groq
 faiss-cpu
 python-dotenv
 sentence-transformers
+torchvision
