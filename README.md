@@ -1,0 +1,1 @@
+# Automated-Industry-Trend-Analyzer
