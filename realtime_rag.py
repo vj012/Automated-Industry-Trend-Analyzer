@@ -17,11 +17,9 @@ def search_and_scrape(query, num_results=5):
     print(f"🔍 Searching the web for: '{query}'...")
     ddgs = DDGS()
     
-    trusted_sites = "(site:mckinsey.com OR site:reuters.com OR site:bloomberg.com OR site:wsj.com OR site:cnbc.com OR site:techcrunch.com OR site:forbes.com OR site:nvidianews.nvidia.com)"
-    advanced_query = f"{query} {trusted_sites}"
-    
     try:
-        results = list(ddgs.text(advanced_query, max_results=num_results))
+    # Removed strict paywall domains to prevent scraper blocking
+    results = list(ddgs.text(query, max_results=num_results))
     except Exception:
         return []
     
