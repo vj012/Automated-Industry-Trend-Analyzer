@@ -18,8 +18,8 @@ def search_and_scrape(query, num_results=5):
     ddgs = DDGS()
     
     try:
-    # Removed strict paywall domains to prevent scraper blocking
-    results = list(ddgs.text(query, max_results=num_results))
+        # Removed strict paywall domains to prevent scraper blocking
+        results = list(ddgs.text(query, max_results=num_results))
     except Exception:
         return []
     
